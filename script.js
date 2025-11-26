@@ -4,18 +4,16 @@
 window.addEventListener("load", () => {
     const loader = document.getElementById("loader");
 
-    // Display time to allow complete Grunge animation sequence:
-    // 5s Text Fill + 0.5s buffer = 5.5s
+    // Display time to allow complete animation sequence:
+    // 2s Portfolio fill + 1.5s signature draw + 0.5s buffer = 4s
     setTimeout(() => {
-        if (loader) {
-            loader.classList.add("hide");
+        loader.classList.add("hide");
 
-            // Remove from DOM after fade-out animation completes
-            setTimeout(() => {
-                loader.remove();
-            }, 500);
-        }
-    }, 5500);
+        // Remove from DOM after fade-out animation completes
+        setTimeout(() => {
+            loader.remove();
+        }, 800);
+    }, 4000);
 });
 
 // ==========================================
@@ -190,12 +188,10 @@ window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset;
 
     // Add shadow when scrolled
-    if (header) {
-        if (currentScroll > 50) {
-            header.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.5)";
-        } else {
-            header.style.boxShadow = "none";
-        }
+    if (currentScroll > 50) {
+        header.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.5)";
+    } else {
+        header.style.boxShadow = "none";
     }
 
     lastScroll = currentScroll;
