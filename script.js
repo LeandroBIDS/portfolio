@@ -3,17 +3,38 @@
 // ==========================================
 window.addEventListener("load", () => {
     const loader = document.getElementById("loader");
+    const video = loader.querySelector("video");
 
-    // Display time to allow complete animation sequence:
-    // 2s Portfolio fill + 1.5s signature draw + 0.5s buffer = 4s
-    setTimeout(() => {
-        loader.classList.add("hide");
+    if (video) {
+        // Function to hide loader
+        const hideLoader = () => {
+            loader.classList.add("hide");
+            setTimeout(() => {
+                loader.remove();
+            }, 800);
+        };
 
-        // Remove from DOM after fade-out animation completes
+        // When video ends, hide loader
+        video.addEventListener("ended", hideLoader);
+
+        // Fallback: if video doesn't play or is too long, force hide after 5s
         setTimeout(() => {
-            loader.remove();
-        }, 800);
-    }, 4000);
+            if (!loader.classList.contains("hide")) {
+                hideLoader();
+            }
+        }, 5000);
+
+        // Ensure video plays
+        video.play().catch(e => console.log("Autoplay prevented:", e));
+    } else {
+        // Fallback if no video found
+        setTimeout(() => {
+            loader.classList.add("hide");
+            setTimeout(() => {
+                loader.remove();
+            }, 800);
+        }, 1500);
+    }
 });
 
 // ==========================================
