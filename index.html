@@ -7,11 +7,40 @@
     <meta name="description"
         content="Designer Multidisciplinar especializado em 3D, Web Design e Visuals. Portfolio de Leandro.">
     <meta name="keywords" content="designer, 3D, web design, portfolio, visuals">
-    <a href="#skills" class="nav-link">Skills</a>
+    <meta name="author" content="Leandro">
+    <title>Leandro - Designer Multidisciplinar</title>
 
-    </nav>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <video class="loader-video" autoplay muted playsinline>
+            <source src="assets/video/loading.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
-    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#home" class="logo">LB</a>
+                <nav class="nav" id="nav">
+                    <a href="#home" class="nav-link">Início</a>
+                    <a href="#about" class="nav-link">Sobre</a>
+                    <a href="#projects" class="nav-link">Projetos</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                </nav>
+            </div>
+        </div>
     </header>
 
     <!-- Hero Section -->
@@ -38,401 +67,6 @@
                 <p class="about-text">
                     Sou um designer apaixonado por criar experiências visuais únicas e impactantes.
                     Com expertise em design 3D, desenvolvimento web e motion graphics, transformo conceitos
-                    em realidade digital.
-                </p>
-                <div class="about-skills">
-                    <div class="skill-item">
-                        <div class="skill-icon">🎨</div>
-                        <h3>Design 3D</h3>
-                        <p>Modelagem, texturização e renderização fotorrealista</p>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon">💻</div>
-                        <h3>Web Design</h3>
-                        <p>Interfaces modernas, responsivas e user-friendly</p>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon">✨</div>
-                        <h3>Motion Graphics</h3>
-                        <p>Animações dinâmicas e storytelling visual</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="section projects" id="projects">
-        <div class="container">
-            <div class="section-header fade-in-section">
-                <h2 class="section-title">Projetos</h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="projects-grid fade-in-section">
-                <!-- Project 1 -->
-                <div class="project-card" data-project="1">
-                    <div class="project-image">
-                        <img src="assets/img/project1.jpg" alt="Projeto 1" loading="lazy">
-                        <div class="project-overlay">
-                            <h3 class="project-title">Branding 3D</h3>
-                            <p class="project-category">Design 3D</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card" data-project="2">
-                    <div class="project-image">
-                        <img src="assets/img/project2.jpg" alt="Projeto 2" loading="lazy">
-                        <div class="project-overlay">
-                            <h3 class="project-title">Website Moderno</h3>
-                            <p class="project-category">Web Design</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card" data-project="3">
-                    <div class="project-image">
-                        <img src="assets/img/project3.jpg" alt="Projeto 3" loading="lazy">
-                        <div class="project-overlay">
-                            <h3 class="project-title">Motion Reel</h3>
-                            <p class="project-category">Motion Graphics</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card" data-project="4">
-                    <div class="project-image">
-                        <img src="assets/img/project4.jpg" alt="Projeto 4" loading="lazy">
-                        <div class="project-overlay">
-                            <h3 class="project-title">Product Visualization</h3>
-                            <p class="project-category">Design 3D</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project-card" data-project="5">
-                    <div class="project-image">
-                        <img src="assets/img/project5.jpg" alt="Projeto 5" loading="lazy">
-                        <div class="project-overlay">
-                            <h3 class="project-title">UI/UX Design</h3>
-                            <p class="project-category">Web Design</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="project-card" data-project="6">
-                    <div class="project-image">
-                        <img src="assets/img/project6.jpg" alt="Projeto 6" loading="lazy">
-                        <div class="project-overlay">
-                            <h3 class="project-title">Abstract Art</h3>
-                            <p class="project-category">Visuals</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="section skills" id="skills">
-        <div class="container">
-            <div class="section-header fade-in-section">
-                <h2 class="section-title">Skills & Softwares</h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="skills-content fade-in-section">
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-name">Blender</div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-name">Adobe Creative Suite</div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-name">Figma</div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 88%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-name">HTML/CSS/JS</div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-name">Cinema 4D</div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        ```
-
-<body>
-    <!-- Loading Screen -->
-    <div class="loader" id="loader">
-        <div class="loader-content">
-            <h1 class="loader-portfolio">Portfolio</h1>
-            <svg class="loader-signature" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg">
-                <path id="signature-path"
-                    d="M 20 60 Q 40 20, 80 50 T 140 60 Q 160 40, 180 60 T 220 50 Q 240 30, 260 55 T 300 60 Q 320 45, 340 60 T 380 55"
-                    fill="none" stroke="#9333ea" stroke-width="3" stroke-linecap="round" />
-                <text class="signature-text" x="50%" y="60%" text-anchor="middle">Leandro
-                    Gonçalves</text>
-            </svg>
-        </div>
-    </div>
-
-    <!-- Header -->
-    <header class="header" id="header">
-        <div class="container">
-            <div class="header-content">
-                <a href="#home" class="logo">LB</a>
-                <nav class="nav" id="nav">
-                    <a href="#home" class="nav-link">Início</a>
-                    <a href="#about" class="nav-link">Sobre</a>
-                    <a href="#projects" class="nav-link">Projetos</a>
-                    <a href="#skills" class="nav-link">Skills</a>
-
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-background"></div>
-        <div class="container">
-            <div class="hero-content fade-in-section">
-                <h1 class="hero-title">Designer Multidisciplinar</h1>
-                <p class="hero-subtitle">3D, Web Design & Visuals</p>
-                <p class="hero-description">Transformo ideias em experiências visuais memoráveis
-                </p>
-                <a href="#projects" class="btn btn-primary">Ver Projetos</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="section about" id="about">
-        <div class="container">
-            <div class="section-header fade-in-section">
-                <h2 class="section-title">Sobre Mim</h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="about-content fade-in-section">
-                <p class="about-text">
-                    Sou um designer apaixonado por criar experiências visuais únicas e
-                    impactantes.
-                    Com expertise em design 3D, desenvolvimento web e motion graphics,
-                    transformo conceitos
-                    em realidade digital.
-                </p>
-                <div class="about-skills">
-                    <div class="skill-item">
-                        <div class="skill-icon">🎨</div>
-                        <h3>Design 3D</h3>
-                        <p>Modelagem, texturização e renderização fotorrealista</p>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon">💻</div>
-                        <h3>Web Design</h3>
-                        <p>Interfaces modernas, responsivas e user-friendly</p>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon">✨</div>
-                        <h3>Motion Graphics</h3>
-                        <p>Animações dinâmicas e storytelling visual</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="section projects" id="projects">
-        <div class="container">
-            <div class="section-header fade-in-section">
-                <h2 class="section-title">Projetos</h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="projects-grid fade-in-section">
-                <!-- Project 1 -->
-                <div class="project-card" data-project="1">
-                    <div class="project-image">
-                        <img src="assets/img/project1.jpg" alt="Projeto 1" loading="lazy">
-                        <div class="project-overlay">
-                            <h3 class="project-title">Branding 3D</h3>
-                            <p class="project-category">Design 3D</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card" data-project="2">
-                    <div class="project-image">
-                        <img src="assets/img/project2.jpg" alt="Projeto 2" loading="lazy">
-                        <div class="project-overlay">
-                            <h3 class="project-title">Website Moderno</h3>
-                            <p class="project-category">Web Design</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card" data-project="3">
-                    <div class="project-image">
-                        <img src="assets/img/project3.jpg" alt="Projeto 3" loading="lazy">
-                        <div class="project-overlay">
-                            <h3 class="project-title">Motion Reel</h3>
-                            <p class="project-category">Motion Graphics</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card" data-project="4">
-                    <div class="project-image">
-                        <img src="assets/img/project4.jpg" alt="Projeto 4" loading="lazy">
-                        <div class="project-overlay">
-                            <h3 class="project-title">Product Visualization</h3>
-                            <p class="project-category">Design 3D</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project-card" data-project="5">
-                    <div class="project-image">
-                        <img src="assets/img/project5.jpg" alt="Projeto 5" loading="lazy">
-                        <div class="project-overlay">
-                            <h3 class="project-title">UI/UX Design</h3>
-                            <p class="project-category">Web Design</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="project-card" data-project="6">
-                    <div class="project-image">
-                        <img src="assets/img/project6.jpg" alt="Projeto 6" loading="lazy">
-                        <div class="project-overlay">
-                            <h3 class="project-title">Abstract Art</h3>
-                            <p class="project-category">Visuals</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="section skills" id="skills">
-        <div class="container">
-            <div class="section-header fade-in-section">
-                <h2 class="section-title">Skills & Softwares</h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="skills-content fade-in-section">
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-name">Blender</div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-name">Adobe Creative Suite</div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-name">Figma</div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 88%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-name">HTML/CSS/JS</div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-name">Cinema 4D</div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-name">After Effects</div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 92%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Project Modal -->
-    <div class="modal" id="projectModal">
-        <div class="modal-overlay" id="modalOverlay"></div>
-        <div class="modal-content">
-            <button class="modal-close" id="modalClose" aria-label="Fechar">×</button>
-            <div class="modal-body" id="modalBody">
-                <!-- Content will be injected by JavaScript -->
-            </div>
-        </div>
-    </div>
-    <a href="#projects" class="nav-link">Projetos</a>
-    <a href="#skills" class="nav-link">Skills</a>
-
-    </nav>
-    </div>
-    </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-background"></div>
-        <div class="container">
-            <div class="hero-content fade-in-section">
-                <h1 class="hero-title">Designer Multidisciplinar</h1>
-                <p class="hero-subtitle">3D, Web Design & Visuals</p>
-                <p class="hero-description">Transformo ideias em experiências visuais memoráveis
-                </p>
-                <a href="#projects" class="btn btn-primary">Ver Projetos</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="section about" id="about">
-        <div class="container">
-            <div class="section-header fade-in-section">
-                <h2 class="section-title">Sobre Mim</h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="about-content fade-in-section">
-                <p class="about-text">
-                    Sou um designer apaixonado por criar experiências visuais únicas e
-                    impactantes.
-                    Com expertise em design 3D, desenvolvimento web e motion graphics,
-                    transformo conceitos
                     em realidade digital.
                 </p>
                 <div class="about-skills">
