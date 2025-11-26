@@ -4,15 +4,18 @@
 window.addEventListener("load", () => {
     const loader = document.getElementById("loader");
 
-    // Ensure minimum display time of 1.5s for smooth experience
+    // Display time to allow complete Grunge animation sequence:
+    // 5s Text Fill + 0.5s buffer = 5.5s
     setTimeout(() => {
-        loader.classList.add("hide");
+        if (loader) {
+            loader.classList.add("hide");
 
-        // Remove from DOM after fade-out animation completes
-        setTimeout(() => {
-            loader.remove();
-        }, 500);
-    }, 1500);
+            // Remove from DOM after fade-out animation completes
+            setTimeout(() => {
+                loader.remove();
+            }, 500);
+        }
+    }, 5500);
 });
 
 // ==========================================
@@ -187,10 +190,12 @@ window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset;
 
     // Add shadow when scrolled
-    if (currentScroll > 50) {
-        header.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.5)";
-    } else {
-        header.style.boxShadow = "none";
+    if (header) {
+        if (currentScroll > 50) {
+            header.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.5)";
+        } else {
+            header.style.boxShadow = "none";
+        }
     }
 
     lastScroll = currentScroll;
