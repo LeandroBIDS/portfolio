@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Designer Multidisciplinar especializado em 3D, Web Design e Visuals. Portfolio de Leandro.">
+    <meta name="description" content="Leandro - Designer Multidisciplinar especializado em 3D, Web Design e Visuals.">
     <meta name="keywords" content="designer, 3D, web design, portfolio, visuals">
     <meta name="author" content="Leandro">
     <title>Leandro - Designer Multidisciplinar</title>
@@ -13,218 +12,145 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 
 <body>
-    <!-- Loading Screen -->
-    <div class="loader" id="loader">
-        <video class="loader-video" autoplay muted playsinline>
-            <source src="assets/video/loading.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-
     <!-- Header -->
-    <header class="header" id="header">
+    <header class="header">
         <div class="container">
-            <div class="header-content">
-                <a href="#home" class="logo">LB</a>
-                <nav class="nav" id="nav">
-                    <a href="#home" class="nav-link">Início</a>
-                    <a href="#about" class="nav-link">Sobre</a>
-                    <a href="#projects" class="nav-link">Projetos</a>
-                    <a href="#skills" class="nav-link">Skills</a>
-                </nav>
-            </div>
+            <a href="#home" class="logo">Leandro</a>
+            <nav class="nav">
+                <a href="#work" class="nav-link">Work</a>
+                <a href="#profile" class="nav-link">Profile</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-background"></div>
         <div class="container">
-            <div class="hero-content fade-in-section">
-                <h1 class="hero-title">Designer Multidisciplinar</h1>
-                <p class="hero-subtitle">3D, Web Design & Visuals</p>
-                <p class="hero-description">Transformo ideias em experiências visuais memoráveis</p>
-                <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+            <h1 class="hero-name">Leandro</h1>
+            <p class="hero-title">Designer Multidisciplinar</p>
+            <p class="hero-subtitle">3D, Web Design & Visuals</p>
+        </div>
+    </section>
+
+    <!-- Feed Section -->
+    <section class="feed" id="work">
+        <div class="container">
+            <div class="feed-header">
+                <h2>Feed ↓</h2>
+                <p class="year">2025</p>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Project 1 - Design Gráfico -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <video autoplay loop muted playsinline>
+                            <source src="imagens/Design Gráfico/Final.m4v" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-type">📸 Snapshot</span>
+                        <h3 class="project-title">Final</h3>
+                        <p class="project-category">Design Gráfico</p>
+                    </div>
+                </article>
+
+                <!-- Project 2 - Design Gráfico -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <video autoplay loop muted playsinline>
+                            <source src="imagens/Design Gráfico/Teaser_Serta_2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-type">📝 Case Study</span>
+                        <h3 class="project-title">Teaser Serta</h3>
+                        <p class="project-category">Design Gráfico</p>
+                    </div>
+                </article>
+
+                <!-- Project 3 - Design Gráfico -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="imagens/Design Gráfico/bee.jpg" alt="Bee Design" loading="lazy">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-type">📸 Snapshot</span>
+                        <h3 class="project-title">Bee Design</h3>
+                        <p class="project-category">Design Gráfico</p>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="section about" id="about">
+    <!-- Focus Section -->
+    <section class="focus">
         <div class="container">
-            <div class="section-header fade-in-section">
-                <h2 class="section-title">Sobre Mim</h2>
-                <div class="title-underline"></div>
+            <h2>Focus ↘</h2>
+            <div class="focus-tags">
+                <span class="tag">Design Gráfico</span>
+                <span class="tag">Motion Graphics</span>
+                <span class="tag">Branding</span>
+                <span class="tag">Creative Direction</span>
             </div>
-            <div class="about-content fade-in-section">
-                <p class="about-text">
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section class="profile" id="profile">
+        <div class="container">
+            <h2>Facts ↘</h2>
+            <div class="profile-content">
+                <p>
                     Sou um designer apaixonado por criar experiências visuais únicas e impactantes.
-                    Com expertise em design 3D, desenvolvimento web e motion graphics, transformo conceitos
-                    em realidade digital.
+                    Com expertise em design gráfico, motion graphics e branding, transformo conceitos
+                    em realidade visual.
                 </p>
-                <div class="about-skills">
-                    <div class="skill-item">
-                        <div class="skill-icon">🎨</div>
-                        <h3>Design 3D</h3>
-                        <p>Modelagem, texturização e renderização fotorrealista</p>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon">💻</div>
-                        <h3>Web Design</h3>
-                        <p>Interfaces modernas, responsivas e user-friendly</p>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-icon">✨</div>
-                        <h3>Motion Graphics</h3>
-                        <p>Animações dinâmicas e storytelling visual</p>
-                    </div>
-                </div>
+                <p>
+                    Ao longo dos anos, dediquei-me a desenvolver projetos que conectam emocionalmente com
+                    as pessoas, focando em design de alta qualidade e atenção aos detalhes.
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="section projects" id="projects">
+    <!-- Contact Section -->
+    <footer class="contact" id="contact">
         <div class="container">
-            <div class="section-header fade-in-section">
-                <h2 class="section-title">Projetos</h2>
-                <div class="title-underline"></div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <a href="mailto:seu@email.com" class="email">seu@email.com</a>
+                    <p class="location">Permanentemente localizado em<br>Sua Cidade, País</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" target="_blank" rel="noopener">Instagram</a>
+                    <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="#" target="_blank" rel="noopener">Behance</a>
+                    <a href="#" target="_blank" rel="noopener">Dribbble</a>
+                </div>
+                <p class="handle">@leandro</p>
             </div>
-            <div class="projects-grid fade-in-section">
-                <!-- Project 1 -->
-                <div class="project-card" data-project="1">
-                    <div class="project-image">
-                        <img src="assets/img/project1.jpg" alt="Projeto 1" loading="lazy">
-                        <div class="project-overlay">
-                            <h3 class="project-title">Branding 3D</h3>
-                            <p class="project-category">Design 3D</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card" data-project="2">
-                    <div class="project-image">
-                        <img src="assets/img/project2.jpg" alt="Projeto 2" loading="lazy">
-                        <div class="project-overlay">
-                            <h3 class="project-title">Website Moderno</h3>
-                            <p class="project-category">Web Design</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card" data-project="3">
-                    <div class="project-image">
-                        <img src="assets/img/project3.jpg" alt="Projeto 3" loading="lazy">
-                        <div class="project-overlay">
-                            <h3 class="project-title">Motion Reel</h3>
-                            <p class="project-category">Motion Graphics</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card" data-project="4">
-                    <div class="project-image">
-                        <img src="assets/img/project4.jpg" alt="Projeto 4" loading="lazy">
-                        <div class="project-overlay">
-                            <h3 class="project-title">Product Visualization</h3>
-                            <p class="project-category">Design 3D</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project-card" data-project="5">
-                    <div class="project-image">
-                        <img src="assets/img/project5.jpg" alt="Projeto 5" loading="lazy">
-                        <div class="project-overlay">
-                            <h3 class="project-title">UI/UX Design</h3>
-                            <p class="project-category">Web Design</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 6 -->
-                <div class="project-card" data-project="6">
-                    <div class="project-image">
-                        <img src="assets/img/project6.jpg" alt="Projeto 6" loading="lazy">
-                        <div class="project-overlay">
-                            <h3 class="project-title">Abstract Art</h3>
-                            <p class="project-category">Visuals</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="footer-note">
+                <p>DON'T BE A JERK & STEAL MY WORK</p>
             </div>
         </div>
-    </section>
+    </footer>
 
-    <!-- Skills Section -->
-    <section class="section skills" id="skills">
-        <div class="container">
-            <div class="section-header fade-in-section">
-                <h2 class="section-title">Skills & Softwares</h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="skills-content fade-in-section">
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <div class="skill-name">Blender</div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 95%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-name">Adobe Creative Suite</div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-name">Figma</div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 88%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-name">HTML/CSS/JS</div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-name">Cinema 4D</div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <div class="skill-name">After Effects</div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" style="width: 92%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Project Modal -->
-    <div class="modal" id="projectModal">
-        <div class="modal-overlay" id="modalOverlay"></div>
-        <div class="modal-content">
-            <button class="modal-close" id="modalClose" aria-label="Fechar">×</button>
-            <div class="modal-body" id="modalBody">
-                <!-- Content will be injected by JavaScript -->
-            </div>
+    <!-- Modal -->
+    <div class="modal" id="mediaModal">
+        <button class="modal-close" id="modalClose">&times;</button>
+        <div class="modal-content" id="modalContent">
+            <!-- Media will be inserted here -->
         </div>
     </div>
 
