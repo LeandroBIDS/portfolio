@@ -698,12 +698,12 @@ model-viewer {
     filter: brightness(0.9);
 }
 
-/* Cursor icon 30% larger and moved left */
+/* Cursor icon 30% larger */
 .skill-item[data-name="Cursor"] .skill-icon {
     height: 78px;
     width: 78px;
     position: relative;
-    left: -15px;
+    left: -10px;
 }
 
 .skill-item:hover .skill-icon {
