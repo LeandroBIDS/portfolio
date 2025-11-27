@@ -101,6 +101,29 @@ document.querySelectorAll('.project-card').forEach(card => {
             const infoContainer = document.createElement('div');
             infoContainer.className = 'modal-info';
 
+            // Project descriptions
+            const projectDescriptions = {
+                "Final": `
+                    <strong>Motion Graphics — "LUMBERJACK" Reimagined</strong><br><br>
+                    Projeto de Motion Graphics desenvolvido através de técnicas de digital collage, combinando múltiplos elementos visuais para recriar cenas inspiradas no videoclipe "LUMBERJACK" de Tyler, The Creator, do álbum Call Me If You Get Lost.<br><br>
+                    O foco foi capturar a energia estética do original, explorando composição, animação de objectos, manipulação de recortes e ritmo visual.<br><br>
+                    Este projeto foi realizado no âmbito do meu percurso académico, servindo como exercício de criatividade, observação e interpretação artística.
+                `,
+                "Bee Design": `
+                    <strong>Poster Experimental — "Bee"</strong><br><br>
+                    Poster gráfico desenvolvido como exploração visual e tipográfica, centrado na representação detalhada de uma abelha.<br><br>
+                    O projeto combina ilustração científica, minimalismo e uma paleta monocromática para criar uma composição limpa, moderna e de carácter quase editorial.<br><br>
+                    Além da componente estética, o poster inclui uma definição descritiva, reforçando o tom informativo e experimental da peça.
+                `
+            };
+
+            const description = projectDescriptions[projectTitle] || `
+                Este projeto demonstra a excelência em design gráfico e motion graphics, 
+                combinando criatividade visual com técnicas avançadas de produção. 
+                Cada detalhe foi cuidadosamente elaborado para criar uma experiência 
+                visual impactante e memorável.
+            `;
+
             // Add project information
             infoContainer.innerHTML = `
                 <div>
@@ -108,12 +131,9 @@ document.querySelectorAll('.project-card').forEach(card => {
                     <h2>${projectTitle}</h2>
                     <span class="project-category">${projectCategory}</span>
                 </div>
-                <p class="project-description">
-                    Este projeto demonstra a excelência em design gráfico e motion graphics, 
-                    combinando criatividade visual com técnicas avançadas de produção. 
-                    Cada detalhe foi cuidadosamente elaborado para criar uma experiência 
-                    visual impactante e memorável.
-                </p>
+                <div class="project-description">
+                    ${description}
+                </div>
             `;
 
             // Append both containers to modal
