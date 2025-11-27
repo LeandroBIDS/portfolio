@@ -634,7 +634,7 @@ model-viewer {
 
 .skills-decoration {
     position: absolute;
-    right: 10%;
+    left: 10%;
     top: 140px;
     width: 120px;
     height: auto;
