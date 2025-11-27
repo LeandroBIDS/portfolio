@@ -106,10 +106,7 @@ a.nav-link:hover {
 }
 
 .logo {
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    color: #fff;
+    display: none;
 }
 
 .nav {
