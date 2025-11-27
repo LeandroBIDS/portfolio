@@ -702,6 +702,26 @@ model-viewer {
     filter: brightness(1);
 }
 
+/* Photoshop - Azul */
+.skill-item[data-name="Photoshop"]:hover .skill-icon {
+    filter: brightness(1) drop-shadow(0 0 20px rgba(49, 168, 255, 0.8));
+}
+
+/* Adobe Illustrator - Laranja */
+.skill-item[data-name="Adobe Illustrator"]:hover .skill-icon {
+    filter: brightness(1) drop-shadow(0 0 20px rgba(255, 154, 0, 0.8));
+}
+
+/* After Effects - Roxo */
+.skill-item[data-name="After Effects"]:hover .skill-icon {
+    filter: brightness(1) drop-shadow(0 0 20px rgba(153, 153, 255, 0.8));
+}
+
+/* Cursor - Verde/Cyan */
+.skill-item[data-name="Cursor"]:hover .skill-icon {
+    filter: brightness(1) drop-shadow(0 0 20px rgba(0, 212, 170, 0.8));
+}
+
 .skill-bar-container {
     display: flex;
     flex-direction: column;
