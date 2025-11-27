@@ -468,6 +468,36 @@ model-viewer {
     background-color: #0f0f0f;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+}
+
+.skills-decoration {
+    position: absolute;
+    left: 115px;
+    top: 150px;
+    width: 180px;
+    height: auto;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.skills-decoration:hover {
+    opacity: 1;
+}
+
+@media (max-width: 1400px) {
+    .skills-decoration {
+        left: 95px;
+        width: 150px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .skills-decoration {
+        display: none;
+    }
 }
 
 .focus h2 {
