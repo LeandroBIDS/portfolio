@@ -129,6 +129,12 @@ document.querySelectorAll('.project-card').forEach(card => {
                     Produção de um vídeo promocional para divulgar uma peça decorativa desenvolvida para o jardim exterior do Fórum Coimbra, criada no âmbito da campanha temática do filme "Barbie".<br><br>
                     O vídeo destaca o processo manual de montagem e os materiais utilizados, reforçando a atenção ao detalhe e a identidade visual vibrante associada ao universo Barbie.<br><br>
                     Este conteúdo foi criado para comunicação da Blachere Illumination, contribuindo para promover a instalação e aumentar o impacto visual da campanha no espaço público.
+                `,
+                'Experiência Criativa — Video Mapping "Rio no Chão"': `
+                    <strong>Experiência Criativa — Video Mapping "Rio no Chão"</strong><br><br>
+                    Desenvolvimento de uma experiência visual em video mapping, criada para simular um pequeno ecossistema de rio quando projetada diretamente no chão.<br><br>
+                    A composição inclui elementos ilustrados como água em movimento, folhas, rochas, relva e pequenos animais, criando uma sensação imersiva e lúdica.<br><br>
+                    Este projeto explorou técnicas de animação, composição digital e ilustração com o objetivo de transformar o espaço físico e proporcionar ao público uma experiência envolvente e interativa.
                 `
             };
 
