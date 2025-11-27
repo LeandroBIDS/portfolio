@@ -193,3 +193,50 @@ document.addEventListener('keydown', function (e) {
         closeModal();
     }
 });
+
+// ===================================
+// Back to Top Button
+// ===================================
+
+const backToTopBtn = document.getElementById('backToTopBtn');
+
+if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+// ===================================
+// Scroll Progress Indicator
+// ===================================
+
+window.addEventListener('scroll', () => {
+    const scrollProgress = document.querySelector('.scroll-progress');
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    
+    if (scrollProgress && scrollIndicator) {
+        // Calculate scroll percentage
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Calculate percentage (0 to 100)
+        const scrollPercentage = (scrollTop / (documentHeight - windowHeight)) * 100;
+        
+        // Get indicator height and slider height
+        const indicatorHeight = scrollIndicator.offsetHeight;
+        const sliderHeight = scrollProgress.offsetHeight;
+        
+        // Calculate max position (indicator height - slider height)
+        const maxPosition = indicatorHeight - sliderHeight;
+        
+        // Calculate slider position
+        const sliderPosition = (scrollPercentage / 100) * maxPosition;
+        
+        // Update slider position
+        scrollProgress.style.top = `${sliderPosition}px`;
+    }
+});
