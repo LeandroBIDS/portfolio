@@ -688,11 +688,6 @@ model-viewer {
     align-items: center;
     gap: 20px;
     position: relative;
-    min-height: 90px;
-}
-
-.skill-item .skill-icon {
-    align-self: center;
 }
 
 .skill-icon {
@@ -703,10 +698,10 @@ model-viewer {
     filter: brightness(0.9);
 }
 
-/* Cursor icon larger - 50% increase */
+/* Cursor icon 30% larger */
 .skill-item[data-name="Cursor"] .skill-icon {
-    height: 90px;
-    width: 90px;
+    height: 78px;
+    width: 78px;
 }
 
 .skill-item:hover .skill-icon {
