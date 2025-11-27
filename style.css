@@ -40,6 +40,10 @@ a:hover {
     opacity: 0.6;
 }
 
+a.nav-link:hover {
+    opacity: 1;
+}
+
 /* ===================================
    Container
    =================================== */
@@ -89,22 +93,45 @@ a:hover {
 
 .nav {
     display: flex;
-    gap: 32px;
+    gap: 16px;
 }
 
 .nav-link {
-    font-size: 15px;
-    font-weight: 400;
-    color: #e5e5e5;
+    display: inline-block;
+    border-radius: 9999px;
+    background-color: #fff;
+    padding: 10px 24px;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: normal;
+    color: #0a0a0a;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    transition: all 150ms ease-in-out;
+}
+
+.nav-link:hover {
+    background-color: #e5e5e5;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.15);
+    transform: translateY(-1px);
+    opacity: 1;
+}
+
+.nav-link:active {
+    background-color: #d4d4d4;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    transform: translateY(0);
 }
 
 @media (max-width: 768px) {
     .nav {
-        gap: 20px;
+        gap: 12px;
     }
 
     .nav-link {
-        font-size: 14px;
+        font-size: 12px;
+        padding: 8px 20px;
     }
 }
 
@@ -130,7 +157,7 @@ a:hover {
 }
 
 .hero-name {
-    font-size: 72px;
+    font-size: 96px;
     font-weight: 700;
     letter-spacing: -0.03em;
     line-height: 1.1;
@@ -183,7 +210,7 @@ model-viewer {
     }
 
     .hero-name {
-        font-size: 48px;
+        font-size: 64px;
     }
 
     .hero-title {
@@ -349,14 +376,16 @@ model-viewer {
     border-radius: 12px;
     padding: 40px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    align-items: center;
 }
 
 .modal-media {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 8px;
+    padding-bottom: 40px;
 }
 
 .modal-media img,
@@ -460,44 +489,117 @@ model-viewer {
 }
 
 /* ===================================
+   Modal Carousel
+   =================================== */
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -125px;
+}
+
+.carousel-slides {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.carousel-slide.active {
+    display: flex;
+}
+
+.carousel-slide video {
+    max-width: 100%;
+    max-height: 580px;
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 12px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    z-index: 5;
+}
+
+.carousel-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 5;
+    pointer-events: all;
+}
+
+.carousel-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicator.active {
+    background: #fff;
+    width: 24px;
+    border-radius: 4px;
+}
+
+@media (max-width: 1024px) {
+    .carousel-slide video {
+        max-height: 50vh;
+    }
+}
+
+/* ===================================
    Focus Section
    =================================== */
 
 .focus {
     padding: 80px 0;
-    background-color: #0f0f0f;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    position: relative;
-}
-
-.skills-decoration {
-    position: absolute;
-    left: 115px;
-    top: 150px;
-    width: 180px;
-    height: auto;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.skills-decoration:hover {
-    opacity: 1;
-}
-
-@media (max-width: 1400px) {
-    .skills-decoration {
-        left: 95px;
-        width: 150px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .skills-decoration {
-        display: none;
-    }
 }
 
 .focus h2 {
@@ -510,8 +612,9 @@ model-viewer {
 
 .focus-tags {
     display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
 }
 
 .tag {
@@ -536,6 +639,159 @@ model-viewer {
     .tag {
         font-size: 14px;
         padding: 10px 20px;
+    }
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.skill-icon {
+    height: 60px;
+    width: 60px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    filter: brightness(0.9);
+}
+
+.skill-item:hover .skill-icon {
+    filter: brightness(1);
+}
+
+.skill-bar-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+
+.skill-item:hover .skill-bar-container {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.skill-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.skill-bar {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.bar-segment {
+    width: 40px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bar-segment::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    transition: width 0.6s ease;
+}
+
+/* Cores baseadas no nível total - todas as barras preenchidas têm a mesma cor */
+
+/* Nível 3/5 - Amarelo */
+.skill-item[data-level="3"] .bar-segment::before {
+    background: linear-gradient(90deg, #FFD600, #FFC700);
+}
+
+/* Nível 4/5 - Verde-claro */
+.skill-item[data-level="4"] .bar-segment::before {
+    background: linear-gradient(90deg, #A8E063, #8FC24E);
+}
+
+/* Nível 5/5 - Verde (para uso futuro) */
+.skill-item[data-level="5"] .bar-segment::before {
+    background: linear-gradient(90deg, #56D96E, #3CC157);
+}
+
+/* Nível 2/5 - Laranja (para uso futuro) */
+.skill-item[data-level="2"] .bar-segment::before {
+    background: linear-gradient(90deg, #FF9500, #FF8500);
+}
+
+/* Nível 1/5 - Vermelho (para uso futuro) */
+.skill-item[data-level="1"] .bar-segment::before {
+    background: linear-gradient(90deg, #FF4444, #E63946);
+}
+
+/* Photoshop - 4/5 */
+.skill-item[data-level="4"]:hover .bar-segment:nth-child(-n+4)::before {
+    width: 100%;
+}
+
+.skill-item[data-level="4"]:hover .bar-segment:nth-child(1)::before {
+    transition-delay: 0.1s;
+}
+
+.skill-item[data-level="4"]:hover .bar-segment:nth-child(2)::before {
+    transition-delay: 0.2s;
+}
+
+.skill-item[data-level="4"]:hover .bar-segment:nth-child(3)::before {
+    transition-delay: 0.3s;
+}
+
+.skill-item[data-level="4"]:hover .bar-segment:nth-child(4)::before {
+    transition-delay: 0.4s;
+}
+
+/* Adobe Illustrator / Cursor - 3/5 */
+.skill-item[data-level="3"]:hover .bar-segment:nth-child(-n+3)::before {
+    width: 100%;
+}
+
+.skill-item[data-level="3"]:hover .bar-segment:nth-child(1)::before {
+    transition-delay: 0.1s;
+}
+
+.skill-item[data-level="3"]:hover .bar-segment:nth-child(2)::before {
+    transition-delay: 0.2s;
+}
+
+.skill-item[data-level="3"]:hover .bar-segment:nth-child(3)::before {
+    transition-delay: 0.3s;
+}
+
+@media (max-width: 768px) {
+    .skill-icon {
+        height: 50px;
+        width: 50px;
+    }
+
+    .skill-item {
+        gap: 15px;
+    }
+
+    .bar-segment {
+        width: 30px;
+        height: 6px;
+    }
+
+    .skill-name {
+        font-size: 12px;
     }
 }
 
@@ -587,7 +843,6 @@ model-viewer {
 .contact {
     padding: 80px 0 60px;
     background-color: #0f0f0f;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .contact-content {
@@ -635,7 +890,6 @@ model-viewer {
 
 .footer-note {
     padding-top: 40px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .footer-note p {

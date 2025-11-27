@@ -29,7 +29,6 @@
             <nav class="nav">
                 <a href="#work" class="nav-link">Work</a>
                 <a href="#profile" class="nav-link">Profile</a>
-                <a href="#contact" class="nav-link">Contact</a>
             </nav>
         </div>
     </header>
@@ -40,8 +39,8 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1 class="hero-name">Leandro</h1>
-                    <p class="hero-title">Designer Multidisciplinar</p>
-                    <p class="hero-subtitle">3D, Web Design & Visuals</p>
+                    <p class="hero-title">Designer</p>
+                    <p class="hero-subtitle">Graphic Design, Motion Design & Video</p>
                 </div>
                 <div class="hero-3d">
                     <!-- src removed, loaded via JS to bypass CORS -->
@@ -59,7 +58,6 @@
         <div class="container">
             <div class="feed-header">
                 <h2>Feed ↓</h2>
-                <p class="year">2025</p>
             </div>
 
             <!-- Projects Grid -->
@@ -113,20 +111,106 @@
                         <p class="project-category">Edição de Vídeo</p>
                     </div>
                 </article>
+
+                <!-- Project 5 - Bumper Documentário -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <video autoplay loop muted playsinline>
+                            <source src="imagens/Design Gráfico/BumperDocMP4.webm" type="video/webm">
+                        </video>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Bumper — Categoria Documentário<br>Festival "Outra Cena", Cinema Jovem de Soure</h3>
+                        <p class="project-category">Motion Graphics</p>
+                    </div>
+                </article>
+
+                <!-- Project 6 - Reels Promocional Blachere -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <video autoplay loop muted playsinline>
+                            <source src="imagens/Design Gráfico/Reels.webm" type="video/webm">
+                        </video>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Reels Promocional — Blachere Illumination</h3>
+                        <p class="project-category">Redes Sociais • Edição de Vídeo</p>
+                    </div>
+                </article>
+
+                <!-- Project 7 - Fashion Show -->
+                <article class="project-card" data-gallery="fashion-show">
+                    <div class="project-image">
+                        <video autoplay loop muted playsinline>
+                            <source src="imagens/Design Gráfico/Fashion Show/FashionShow.webm" type="video/webm">
+                        </video>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Conteúdos Visuais — Fashion Show do Fórum Coimbra<br>(Blachere Illumination)</h3>
+                        <p class="project-category">Redes Sociais • Video Mapping • Motion Graphics</p>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Focus Section -->
+    <!-- Skills Section -->
     <section class="focus">
-        <img src="materiais/hoverto.png" alt="Hover to see" class="skills-decoration">
         <div class="container">
-            <h2>Focus ↘</h2>
+            <h2>Skills ↘</h2>
             <div class="focus-tags">
-                <span class="tag">Design Gráfico</span>
-                <span class="tag">Motion Graphics</span>
-                <span class="tag">Branding</span>
-                <span class="tag">Creative Direction</span>
+                <div class="skill-item" data-level="4" data-name="Photoshop">
+                    <img src="materiais/Ps.png" alt="Photoshop" class="skill-icon">
+                    <div class="skill-bar-container">
+                        <span class="skill-name">Photoshop</span>
+                        <div class="skill-bar">
+                            <span class="bar-segment"></span>
+                            <span class="bar-segment"></span>
+                            <span class="bar-segment"></span>
+                            <span class="bar-segment"></span>
+                            <span class="bar-segment"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-item" data-level="3" data-name="Adobe Illustrator">
+                    <img src="materiais/Ai.png" alt="Illustrator" class="skill-icon">
+                    <div class="skill-bar-container">
+                        <span class="skill-name">Adobe Illustrator</span>
+                        <div class="skill-bar">
+                            <span class="bar-segment"></span>
+                            <span class="bar-segment"></span>
+                            <span class="bar-segment"></span>
+                            <span class="bar-segment"></span>
+                            <span class="bar-segment"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-item" data-level="4" data-name="After Effects">
+                    <img src="materiais/Ae.png" alt="After Effects" class="skill-icon">
+                    <div class="skill-bar-container">
+                        <span class="skill-name">After Effects</span>
+                        <div class="skill-bar">
+                            <span class="bar-segment"></span>
+                            <span class="bar-segment"></span>
+                            <span class="bar-segment"></span>
+                            <span class="bar-segment"></span>
+                            <span class="bar-segment"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-item" data-level="3" data-name="Cursor">
+                    <img src="materiais/Cursor.png" alt="Cursor" class="skill-icon">
+                    <div class="skill-bar-container">
+                        <span class="skill-name">Cursor</span>
+                        <div class="skill-bar">
+                            <span class="bar-segment"></span>
+                            <span class="bar-segment"></span>
+                            <span class="bar-segment"></span>
+                            <span class="bar-segment"></span>
+                            <span class="bar-segment"></span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -148,28 +232,6 @@
             </div>
         </div>
     </section>
-
-    <!-- Contact Section -->
-    <footer class="contact" id="contact">
-        <div class="container">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <a href="mailto:seu@email.com" class="email">seu@email.com</a>
-                    <p class="location">Permanentemente localizado em<br>Sua Cidade, País</p>
-                </div>
-                <div class="social-links">
-                    <a href="#" target="_blank" rel="noopener">Instagram</a>
-                    <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-                    <a href="#" target="_blank" rel="noopener">Behance</a>
-                    <a href="#" target="_blank" rel="noopener">Dribbble</a>
-                </div>
-                <p class="handle">@leandro</p>
-            </div>
-            <div class="footer-note">
-                <p>DON'T BE A JERK & STEAL MY WORK</p>
-            </div>
-        </div>
-    </footer>
 
     <!-- Modal -->
     <div class="modal" id="mediaModal">
