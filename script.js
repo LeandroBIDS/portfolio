@@ -74,8 +74,11 @@ const modalClose = document.getElementById('modalClose');
 document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('click', function () {
         const mediaElement = this.querySelector('.project-image img, .project-image video');
-        const projectTitle = this.querySelector('.project-title').textContent;
-        const projectType = this.querySelector('.project-type').textContent;
+        const projectTitleElement = this.querySelector('.project-title');
+        const projectTitle = projectTitleElement.innerHTML;
+        const projectTitleText = projectTitleElement.textContent;
+        const projectTypeElement = this.querySelector('.project-type');
+        const projectType = projectTypeElement ? projectTypeElement.textContent : '';
         const projectCategory = this.querySelector('.project-category').textContent;
 
         if (mediaElement) {
@@ -103,13 +106,19 @@ document.querySelectorAll('.project-card').forEach(card => {
 
             // Project descriptions
             const projectDescriptions = {
-                "Final": `
+                'Tyler, The Creator - "LUMBERJACK"Reimagined': `
                     <strong>Motion Graphics — "LUMBERJACK" Reimagined</strong><br><br>
                     Projeto de Motion Graphics desenvolvido através de técnicas de digital collage, combinando múltiplos elementos visuais para recriar cenas inspiradas no videoclipe "LUMBERJACK" de Tyler, The Creator, do álbum Call Me If You Get Lost.<br><br>
                     O foco foi capturar a energia estética do original, explorando composição, animação de objectos, manipulação de recortes e ritmo visual.<br><br>
                     Este projeto foi realizado no âmbito do meu percurso académico, servindo como exercício de criatividade, observação e interpretação artística.
                 `,
-                "Bee Design": `
+                "Storie Teaser Sertanejinho": `
+                    <strong>Storie Teaser — Apresentação de Artista</strong><br><br>
+                    Criação de um Instagram Storie em formato teaser para anunciar a apresentação de um artista numa comissão de festas.<br><br>
+                    O design foi inspirado numa estética retro-digital, recriando ícones e elementos visuais de interfaces antigas para destacar o artista de forma criativa e inesperada.<br><br>
+                    Este projeto integrou a estratégia de comunicação da página de Instagram da comissão, contribuindo para aumentar o interesse e a antecipação do público antes do anúncio oficial.
+                `,
+                "Bee": `
                     <strong>Poster Experimental — "Bee"</strong><br><br>
                     Poster gráfico desenvolvido como exploração visual e tipográfica, centrado na representação detalhada de uma abelha.<br><br>
                     O projeto combina ilustração científica, minimalismo e uma paleta monocromática para criar uma composição limpa, moderna e de carácter quase editorial.<br><br>
@@ -117,7 +126,7 @@ document.querySelectorAll('.project-card').forEach(card => {
                 `
             };
 
-            const description = projectDescriptions[projectTitle] || `
+            const description = projectDescriptions[projectTitleText] || `
                 Este projeto demonstra a excelência em design gráfico e motion graphics, 
                 combinando criatividade visual com técnicas avançadas de produção. 
                 Cada detalhe foi cuidadosamente elaborado para criar uma experiência 
@@ -127,7 +136,7 @@ document.querySelectorAll('.project-card').forEach(card => {
             // Add project information
             infoContainer.innerHTML = `
                 <div>
-                    <p class="project-type">${projectType}</p>
+                    ${projectType ? `<p class="project-type">${projectType}</p>` : ''}
                     <h2>${projectTitle}</h2>
                     <span class="project-category">${projectCategory}</span>
                 </div>
