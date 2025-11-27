@@ -703,7 +703,7 @@ model-viewer {
     height: 78px;
     width: 78px;
     position: relative;
-    left: -25px;
+    left: -15px;
 }
 
 .skill-item:hover .skill-icon {
