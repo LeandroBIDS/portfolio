@@ -688,6 +688,11 @@ model-viewer {
     align-items: center;
     gap: 20px;
     position: relative;
+    min-height: 90px;
+}
+
+.skill-item .skill-icon {
+    align-self: center;
 }
 
 .skill-icon {
