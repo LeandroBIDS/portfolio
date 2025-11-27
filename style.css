@@ -226,9 +226,8 @@ model-viewer {
 }
 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 20px;
+    column-count: 3;
+    column-gap: 20px;
     max-width: 100%;
 }
 
@@ -236,6 +235,15 @@ model-viewer {
     cursor: pointer;
     transition: transform 0.3s ease;
     width: 100%;
+    break-inside: avoid;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+@media (max-width: 1200px) {
+    .projects-grid {
+        column-count: 2;
+    }
 }
 
 .project-card:hover {
@@ -247,7 +255,7 @@ model-viewer {
     background-color: #1a1a1a;
     border-radius: 12px;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     border: 1px solid rgba(255, 255, 255, 0.05);
     position: relative;
 }
@@ -294,8 +302,12 @@ model-viewer {
 
 @media (max-width: 768px) {
     .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
+        column-count: 1;
+        column-gap: 0;
+    }
+
+    .project-card {
+        margin-bottom: 40px;
     }
 
     .project-title {

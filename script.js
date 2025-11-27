@@ -123,6 +123,12 @@ document.querySelectorAll('.project-card').forEach(card => {
                     Poster gráfico desenvolvido como exploração visual e tipográfica, centrado na representação detalhada de uma abelha.<br><br>
                     O projeto combina ilustração científica, minimalismo e uma paleta monocromática para criar uma composição limpa, moderna e de carácter quase editorial.<br><br>
                     Além da componente estética, o poster inclui uma definição descritiva, reforçando o tom informativo e experimental da peça.
+                `,
+                'Vídeo Promocional — Instalação Temática "Barbie" (Fórum Coimbra)': `
+                    <strong>Vídeo Promocional — Instalação Temática "Barbie"</strong><br><br>
+                    Produção de um vídeo promocional para divulgar uma peça decorativa desenvolvida para o jardim exterior do Fórum Coimbra, criada no âmbito da campanha temática do filme "Barbie".<br><br>
+                    O vídeo destaca o processo manual de montagem e os materiais utilizados, reforçando a atenção ao detalhe e a identidade visual vibrante associada ao universo Barbie.<br><br>
+                    Este conteúdo foi criado para comunicação da Blachere Illumination, contribuindo para promover a instalação e aumentar o impacto visual da campanha no espaço público.
                 `
             };
 
