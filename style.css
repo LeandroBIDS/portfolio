@@ -232,6 +232,7 @@ a.nav-link:hover {
     opacity: 0.8;
     pointer-events: none;
     z-index: 1;
+    display: none; /* Temporariamente escondido */
 }
 
 .hero-name {
