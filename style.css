@@ -94,12 +94,8 @@ a.nav-link:hover {
     left: 0;
     right: 0;
     z-index: 1000;
-    /* Glassmorphism effect */
-    background: linear-gradient(
-        135deg,
-        rgba(20, 20, 20, 0.7),
-        rgba(10, 10, 10, 0.6)
-    );
+    /* Glassmorphism effect with transparent background */
+    background: transparent;
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
