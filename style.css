@@ -165,20 +165,73 @@ a.nav-link:hover {
    =================================== */
 
 .hero {
-    padding: 200px 0 120px;
+    padding: 0 0 120px;
     margin-top: 72px;
 }
 
 .hero-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
+    gap: 80px;
+    align-items: start;
+}
+
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .hero-text {
     display: flex;
     flex-direction: column;
+}
+
+.hero-skills {
+    position: relative;
+    padding-top: 140px;
+    margin-left: 100px;
+}
+
+.skills-languages-container {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.skills-section,
+.language-section {
+    flex: 1;
+}
+
+.hero-skills h2 {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.skills-section h2 {
+    margin-left: -20px;
+}
+
+.hero-skills .focus-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.hero-skills .skills-decoration {
+    position: absolute;
+    left: -165px;
+    top: 200px;
+    width: 180px;
+    height: auto;
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .hero-name {
@@ -205,33 +258,40 @@ a.nav-link:hover {
 
 .hero-3d {
     width: 100%;
-    height: 500px;
+    height: 400px;
     background: radial-gradient(circle at center, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0) 70%);
     border-radius: 16px;
     overflow: hidden;
     position: relative;
+    margin-left: -100px;
 }
 
 model-viewer {
     width: 100%;
     height: 100%;
     --poster-color: transparent;
+    --progress-bar-color: transparent;
+    --progress-bar-height: 0px;
 }
 
 @media (max-width: 1024px) {
     .hero-content {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 60px;
     }
 
     .hero-3d {
-        height: 400px;
+        height: 350px;
+    }
+    
+    .hero-skills .skills-decoration {
+        display: none;
     }
 }
 
 @media (max-width: 768px) {
     .hero {
-        padding: 140px 0 80px;
+        padding: 40px 0 80px;
     }
 
     .hero-name {
@@ -247,7 +307,25 @@ model-viewer {
     }
 
     .hero-3d {
-        height: 350px;
+        height: 300px;
+    }
+    
+    .hero-left {
+        gap: 30px;
+    }
+    
+    .hero-skills {
+        padding-top: 60px;
+        margin-left: 0;
+    }
+    
+    .skills-languages-container {
+        flex-direction: column;
+        gap: 60px;
+    }
+    
+    .skills-section h2 {
+        margin-left: 0;
     }
 }
 
@@ -687,36 +765,7 @@ model-viewer {
    Focus Section
    =================================== */
 
-.focus {
-    padding: 80px 0;
-    position: relative;
-}
-
-.skills-decoration {
-    position: absolute;
-    left: calc(10% - 100px);
-    top: 160px;
-    width: 180px;
-    height: auto;
-    opacity: 0.8;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.focus h2 {
-    font-size: 32px;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    margin-bottom: 40px;
-    color: #fff;
-}
-
-.focus-tags {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    align-items: flex-start;
-}
+/* Focus section removed - now integrated in hero */
 
 .tag {
     display: inline-block;
@@ -758,6 +807,18 @@ model-viewer {
     filter: brightness(0.9);
 }
 
+.language-flag {
+    font-size: 48px;
+    line-height: 60px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    filter: brightness(0.9);
+}
+
 /* Cursor icon 30% larger */
 .skill-item[data-name="Cursor"] .skill-icon {
     height: 78px;
@@ -766,7 +827,8 @@ model-viewer {
     left: -10px;
 }
 
-.skill-item:hover .skill-icon {
+.skill-item:hover .skill-icon,
+.skill-item:hover .language-flag {
     filter: brightness(1);
 }
 
@@ -788,6 +850,21 @@ model-viewer {
 /* Cursor - Verde/Cyan */
 .skill-item[data-name="Cursor"]:hover .skill-icon {
     filter: brightness(1) drop-shadow(0 0 20px rgba(0, 212, 170, 0.8));
+}
+
+/* Portuguese - Verde e Vermelho */
+.skill-item[data-name="Portuguese"]:hover .language-flag {
+    filter: brightness(1) drop-shadow(0 0 20px rgba(255, 0, 0, 0.6)) drop-shadow(0 0 20px rgba(0, 102, 0, 0.6));
+}
+
+/* English - Azul e Vermelho */
+.skill-item[data-name="English"]:hover .language-flag {
+    filter: brightness(1) drop-shadow(0 0 20px rgba(0, 40, 104, 0.6)) drop-shadow(0 0 20px rgba(200, 16, 46, 0.6));
+}
+
+/* French - Azul, Branco e Vermelho */
+.skill-item[data-name="French"]:hover .language-flag {
+    filter: brightness(1) drop-shadow(0 0 20px rgba(0, 85, 164, 0.6)) drop-shadow(0 0 20px rgba(239, 65, 53, 0.6));
 }
 
 .skill-bar-container {
@@ -904,10 +981,54 @@ model-viewer {
     transition-delay: 0.3s;
 }
 
+/* Portuguese - 5/5 */
+.skill-item[data-level="5"]:hover .bar-segment:nth-child(-n+5)::before {
+    width: 100%;
+}
+
+.skill-item[data-level="5"]:hover .bar-segment:nth-child(1)::before {
+    transition-delay: 0.1s;
+}
+
+.skill-item[data-level="5"]:hover .bar-segment:nth-child(2)::before {
+    transition-delay: 0.2s;
+}
+
+.skill-item[data-level="5"]:hover .bar-segment:nth-child(3)::before {
+    transition-delay: 0.3s;
+}
+
+.skill-item[data-level="5"]:hover .bar-segment:nth-child(4)::before {
+    transition-delay: 0.4s;
+}
+
+.skill-item[data-level="5"]:hover .bar-segment:nth-child(5)::before {
+    transition-delay: 0.5s;
+}
+
+/* French - 2/5 */
+.skill-item[data-level="2"]:hover .bar-segment:nth-child(-n+2)::before {
+    width: 100%;
+}
+
+.skill-item[data-level="2"]:hover .bar-segment:nth-child(1)::before {
+    transition-delay: 0.1s;
+}
+
+.skill-item[data-level="2"]:hover .bar-segment:nth-child(2)::before {
+    transition-delay: 0.2s;
+}
+
 @media (max-width: 768px) {
     .skill-icon {
         height: 50px;
         width: 50px;
+    }
+    
+    .language-flag {
+        font-size: 40px;
+        width: 50px;
+        height: 50px;
     }
 
     .skill-item {

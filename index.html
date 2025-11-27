@@ -27,8 +27,6 @@
         <div class="container">
             <a href="#home" class="logo">Leandro</a>
             <nav class="nav">
-                <a href="#work" class="nav-link">Work</a>
-                <a href="#profile" class="nav-link">Profile</a>
             </nav>
         </div>
     </header>
@@ -37,17 +35,126 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-name">Leandro</h1>
-                    <p class="hero-title">Designer</p>
-                    <p class="hero-subtitle">Graphic Design, Motion Design & Video</p>
+                <div class="hero-left">
+                    <div class="hero-text">
+                        <h1 class="hero-name">Leandro</h1>
+                        <p class="hero-title">Designer</p>
+                        <p class="hero-subtitle">Graphic Design, Motion Design & Video</p>
+                    </div>
+                    <div class="hero-3d">
+                        <!-- src removed, loaded via JS to bypass CORS -->
+                        <model-viewer alt="Modelo 3D Leandro" camera-controls disable-zoom
+                            min-camera-orbit="-90deg 90deg auto" max-camera-orbit="90deg 90deg auto" shadow-intensity="1"
+                            style="width: 100%; height: 100%; background-color: transparent;">
+                        </model-viewer>
+                    </div>
                 </div>
-                <div class="hero-3d">
-                    <!-- src removed, loaded via JS to bypass CORS -->
-                    <model-viewer alt="Modelo 3D Leandro" camera-controls disable-zoom
-                        min-camera-orbit="-90deg 90deg auto" max-camera-orbit="90deg 90deg auto" shadow-intensity="1"
-                        style="width: 100%; height: 100%; background-color: transparent;">
-                    </model-viewer>
+                <div class="hero-skills">
+                    <img src="materiais/hoverto.png" alt="Hover to see" class="skills-decoration">
+                    <div class="skills-languages-container">
+                        <div class="skills-section">
+                            <h2>Skills ↓</h2>
+                            <div class="focus-tags">
+                                <div class="skill-item" data-level="4" data-name="Photoshop">
+                                    <img src="materiais/Skills/Ps.png" alt="Photoshop" class="skill-icon">
+                                    <div class="skill-bar-container">
+                                        <span class="skill-name">Photoshop</span>
+                                        <div class="skill-bar">
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-item" data-level="3" data-name="Adobe Illustrator">
+                                    <img src="materiais/Skills/Ai.png" alt="Illustrator" class="skill-icon">
+                                    <div class="skill-bar-container">
+                                        <span class="skill-name">Adobe Illustrator</span>
+                                        <div class="skill-bar">
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-item" data-level="4" data-name="After Effects">
+                                    <img src="materiais/Skills/Ae.png" alt="After Effects" class="skill-icon">
+                                    <div class="skill-bar-container">
+                                        <span class="skill-name">After Effects</span>
+                                        <div class="skill-bar">
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-item" data-level="3" data-name="Cursor">
+                                    <img src="materiais/Skills/Cursor.svg" alt="Cursor" class="skill-icon">
+                                    <div class="skill-bar-container">
+                                        <span class="skill-name">Cursor</span>
+                                        <div class="skill-bar">
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="language-section">
+                            <h2>Language ↓</h2>
+                            <div class="focus-tags">
+                                <div class="skill-item" data-level="5" data-name="Portuguese">
+                                    <span class="language-flag">🇵🇹</span>
+                                    <div class="skill-bar-container">
+                                        <span class="skill-name">Portuguese</span>
+                                        <div class="skill-bar">
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-item" data-level="4" data-name="English">
+                                    <span class="language-flag">🇬🇧</span>
+                                    <div class="skill-bar-container">
+                                        <span class="skill-name">English</span>
+                                        <div class="skill-bar">
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-item" data-level="2" data-name="French">
+                                    <span class="language-flag">🇫🇷</span>
+                                    <div class="skill-bar-container">
+                                        <span class="skill-name">French</span>
+                                        <div class="skill-bar">
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                            <span class="bar-segment"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -164,86 +271,6 @@
                         <p class="project-category">Video Mapping • Edição de Vídeo</p>
                     </div>
                 </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="focus">
-        <img src="materiais/hoverto.png" alt="Hover to see" class="skills-decoration">
-        <div class="container">
-            <h2>Skills ↘</h2>
-            <div class="focus-tags">
-                <div class="skill-item" data-level="4" data-name="Photoshop">
-                    <img src="materiais/Skills/Ps.png" alt="Photoshop" class="skill-icon">
-                    <div class="skill-bar-container">
-                        <span class="skill-name">Photoshop</span>
-                        <div class="skill-bar">
-                            <span class="bar-segment"></span>
-                            <span class="bar-segment"></span>
-                            <span class="bar-segment"></span>
-                            <span class="bar-segment"></span>
-                            <span class="bar-segment"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-item" data-level="3" data-name="Adobe Illustrator">
-                    <img src="materiais/Skills/Ai.png" alt="Illustrator" class="skill-icon">
-                    <div class="skill-bar-container">
-                        <span class="skill-name">Adobe Illustrator</span>
-                        <div class="skill-bar">
-                            <span class="bar-segment"></span>
-                            <span class="bar-segment"></span>
-                            <span class="bar-segment"></span>
-                            <span class="bar-segment"></span>
-                            <span class="bar-segment"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-item" data-level="4" data-name="After Effects">
-                    <img src="materiais/Skills/Ae.png" alt="After Effects" class="skill-icon">
-                    <div class="skill-bar-container">
-                        <span class="skill-name">After Effects</span>
-                        <div class="skill-bar">
-                            <span class="bar-segment"></span>
-                            <span class="bar-segment"></span>
-                            <span class="bar-segment"></span>
-                            <span class="bar-segment"></span>
-                            <span class="bar-segment"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-item" data-level="3" data-name="Cursor">
-                    <img src="materiais/Skills/Cursor.svg" alt="Cursor" class="skill-icon">
-                    <div class="skill-bar-container">
-                        <span class="skill-name">Cursor</span>
-                        <div class="skill-bar">
-                            <span class="bar-segment"></span>
-                            <span class="bar-segment"></span>
-                            <span class="bar-segment"></span>
-                            <span class="bar-segment"></span>
-                            <span class="bar-segment"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Profile Section -->
-    <section class="profile" id="profile">
-        <div class="container">
-            <h2>Facts ↘</h2>
-            <div class="profile-content">
-                <p>
-                    Sou um designer apaixonado por criar experiências visuais únicas e impactantes.
-                    Com expertise em design gráfico, motion graphics e branding, transformo conceitos
-                    em realidade visual.
-                </p>
-                <p>
-                    Ao longo dos anos, dediquei-me a desenvolver projetos que conectam emocionalmente com
-                    as pessoas, focando em design de alta qualidade e atenção aos detalhes.
-                </p>
             </div>
         </div>
     </section>
