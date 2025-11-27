@@ -629,6 +629,18 @@ model-viewer {
 
 .focus {
     padding: 80px 0;
+    position: relative;
+}
+
+.skills-decoration {
+    position: absolute;
+    right: 10%;
+    top: 140px;
+    width: 120px;
+    height: auto;
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .focus h2 {
@@ -821,6 +833,10 @@ model-viewer {
 
     .skill-name {
         font-size: 12px;
+    }
+
+    .skills-decoration {
+        display: none;
     }
 }
 
