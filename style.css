@@ -339,34 +339,6 @@ model-viewer {
     position: relative;
 }
 
-.feed-decoration {
-    position: absolute;
-    left: 115px;
-    top: 280px;
-    width: 180px;
-    height: auto;
-    transition: opacity 0.3s ease;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.feed-decoration:hover {
-    opacity: 1;
-}
-
-@media (max-width: 1400px) {
-    .feed-decoration {
-        left: 95px;
-        width: 150px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .feed-decoration {
-        display: none;
-    }
-}
-
 .feed-header {
     margin-bottom: 60px;
 }
